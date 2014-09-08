@@ -413,6 +413,7 @@
 				23C8958F19B9AAC80032BA4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23C8959019B9AAC80032BA4D /* Build configuration list for PBXNativeTarget "myFirstAPITests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +422,7 @@
 				23C8959219B9AAC80032BA4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

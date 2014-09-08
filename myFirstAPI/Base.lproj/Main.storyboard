@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.9" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,9 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hev-YS-DlS">
-                                <rect key="frame" x="265" y="272" width="71" height="30"/>
+                                <rect key="frame" x="265" y="52" width="71" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Say Hello">
+                                <state key="normal" title="Roll up!">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -27,21 +28,66 @@
                                     <action selector="loadData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ph9-S5-Bwe"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diI-p4-m8P">
-                                <rect key="frame" x="293" y="227" width="15" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Firstname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUm-XY-epS">
+                                <rect key="frame" x="252" y="120" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lastname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X00-pe-g5l">
+                                <rect key="frame" x="252" y="175" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kac-r3-d0V">
+                                <rect key="frame" x="252" y="228" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B2x-oV-3uk">
+                                <rect key="frame" x="252" y="338" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XE7-Dl-f6D">
+                                <rect key="frame" x="277" y="411" width="53" height="30"/>
+                                <state key="normal" title="Roll up!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2I8-zo-jfo"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="coY-IA-p0v">
+                                <rect key="frame" x="252" y="285" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.41568630933761597" green="0.65490198135375977" blue="0.93725496530532837" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="diI-p4-m8P" secondAttribute="centerX" id="cXy-KC-Hxd"/>
+                            <constraint firstItem="B2x-oV-3uk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5Ad-1B-UqV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="coY-IA-p0v" secondAttribute="trailing" id="CqU-JK-8WR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kac-r3-d0V" secondAttribute="trailing" id="GZN-kq-pvS"/>
+                            <constraint firstAttribute="centerX" secondItem="kac-r3-d0V" secondAttribute="centerX" id="H1A-Rd-sCn"/>
+                            <constraint firstAttribute="centerX" secondItem="BUm-XY-epS" secondAttribute="centerX" id="HGl-9m-lJs"/>
+                            <constraint firstItem="X00-pe-g5l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MUj-oC-cOa"/>
+                            <constraint firstAttribute="centerX" secondItem="coY-IA-p0v" secondAttribute="centerX" id="Pn2-TC-b2A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B2x-oV-3uk" secondAttribute="trailing" id="WTZ-RG-jhp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BUm-XY-epS" secondAttribute="trailing" id="dDT-TI-gi8"/>
+                            <constraint firstAttribute="centerX" secondItem="B2x-oV-3uk" secondAttribute="centerX" id="jBZ-RQ-C22"/>
+                            <constraint firstAttribute="centerX" secondItem="XE7-Dl-f6D" secondAttribute="centerX" id="jew-9d-buS"/>
+                            <constraint firstItem="coY-IA-p0v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="koh-np-o7s"/>
+                            <constraint firstItem="BUm-XY-epS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kxL-Ve-H3p"/>
+                            <constraint firstItem="kac-r3-d0V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lI0-TO-0b9"/>
+                            <constraint firstAttribute="centerX" secondItem="X00-pe-g5l" secondAttribute="centerX" id="ldB-Je-86k"/>
                             <constraint firstAttribute="centerX" secondItem="hev-YS-DlS" secondAttribute="centerX" id="u00-Jg-HTa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X00-pe-g5l" secondAttribute="trailing" id="wkz-4Z-h0s"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="helloMessage" destination="diI-p4-m8P" id="A7a-mL-NW2"/>
+                        <outlet property="textFieldFirstname" destination="BUm-XY-epS" id="xec-6F-v1k"/>
+                        <outlet property="textFieldLastname" destination="X00-pe-g5l" id="bLi-pn-Vyr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
